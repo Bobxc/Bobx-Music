@@ -1,1 +1,15 @@
 /* pages/main-music/main-music.wxss */
+page {
+  --search-background-color: #fff;
+  --search-padding: 10px 0px;
+  background-color: #fafafa;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.banner {
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+.banner .item .image {
+  width: 100%;
+}
