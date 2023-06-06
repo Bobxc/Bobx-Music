@@ -1,18 +1,27 @@
 <!--pages/main-music/main-music.wxml-->
-<van-search
-  value="{{ searchValue }}"
-  shape="round"
-  background="#fafafa"
-  placeholder="请输入搜索关键词"
-  bind:click-input="onSearchClick"
-/>
+<van-search value="{{ searchValue }}" shape="round" background="#fafafa" placeholder="请输入搜索关键词" bind:click-input="onSearchClick" />
 
-<swiper class="banner" circular indicator-dots>
+<swiper class="banner" style="height: {{bannerHeight}}px;" circular indicator-dots>
   <block wx:for="{{banners}}" wx:key="targetId">
     <swiper-item class="item">
-      <image class="image" src="{{item.imageUrl}}" mode="widthFix"/>
+      <image class="banner-image" src="{{item.imageUrl}}" mode="widthFix" bindload="onBannerImageLoad" />
     </swiper-item>
   </block>
 </swiper>
 
+<!-- 推荐歌曲 -->
+<view class="recommend" wx:if="{{recommendSongs.length}}">
+  <area-header title="推荐歌曲" bind:moreClick="onRecomendMoreClick" />
+  <view class="list">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <song-item-v1 itemData="{{item}}"/>
+    </block>
+  </view>
+</view>
 
+<!-- 热门歌单 -->
+<menu-area title="热门歌曲" menuList="{{hotMenuList}}"/>
+<menu-area title="推荐歌曲" menuList="{{recMenuList}}"/>
+
+
+<area-header title="巅峰榜" hasMore="{{false}}" />

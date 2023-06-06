@@ -1,0 +1,5 @@
+<!--pages/detail-song/detail-song.wxml-->
+<text>pages/detail-song/detail-song.wxml</text>
+<view>
+  {{type}}
+</view>

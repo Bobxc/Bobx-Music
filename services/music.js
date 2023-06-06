@@ -7,3 +7,17 @@ export function getMusicBanner(data) {
     data
   })
 }
+
+export function getPlaylistDetail(data) {
+  return hyRequest.get({
+    url: "/playlist/detail",
+    data
+  })
+}
+
+export function getSongMenuList(data) {
+  return hyRequest.get({
+    url: "/top/playlist",
+    data
+  })
+}
