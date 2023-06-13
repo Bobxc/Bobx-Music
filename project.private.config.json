@@ -28,6 +28,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/main-music/main-music",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/music-player/music-player",
+          "query": "id=2041974276",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

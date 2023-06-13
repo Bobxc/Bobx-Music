@@ -21,3 +21,10 @@ export function getSongMenuList(data) {
     data
   })
 }
+
+
+export function getSongMenuTag() {
+  return hyRequest.get({
+    url: "/playlist/hot"
+  })
+}
